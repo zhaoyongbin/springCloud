@@ -22,4 +22,5 @@ eureka:
          prefer-ip-address: true  # 优先使用该服务器的ip 地址注册到eureka 在生产环境配置成true
          lease-renewal-interval-in-secounds: 30 #服务续约间隔 默认30s
          lease-expiration-duration-in-secounds: 90 #服务失效时间
+         #赵永彬测试时修改
 

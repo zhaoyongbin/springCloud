@@ -23,4 +23,5 @@ eureka:
          lease-renewal-interval-in-secounds: 30 #服务续约间隔 默认30s
          lease-expiration-duration-in-secounds: 90 #服务失效时间
          #赵永彬测试时修改
+         spring.port=210
 

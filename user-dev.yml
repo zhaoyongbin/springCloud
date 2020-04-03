@@ -1,0 +1,25 @@
+server:
+  port: 9101
+spring:
+  application:
+    name: microservice-user   # 服务名称
+  datasource:
+      url: jdbc:mysql://192.168.1.186:3306/myself_wms?characterEnconding=UTF8
+      driver-class-name: com.mysql.jdbc.Driver
+      username: root
+      password: 123
+  jpa:
+    show-sql: true # 是否打印sql语句
+    generate-ddl: true # 是否自动建表
+    database: mysql # jpa连接的数据库类型
+eureka:
+    client:
+      register-with-eureka: true #作为客户端需要祖册到erueka
+      fetch-registry: true # 作为客户端需要从eureka获取注册信息
+      service-url:
+        defaultZone: http://127.0.0.1:8888/eureka #,http://127.0.0.1:9999/eureka #客户端注册地址
+      instance:
+         prefer-ip-address: true  # 优先使用该服务器的ip 地址注册到eureka 在生产环境配置成true
+         lease-renewal-interval-in-secounds: 30 #服务续约间隔 默认30s
+         lease-expiration-duration-in-secounds: 90 #服务失效时间
+

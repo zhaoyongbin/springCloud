@@ -4,7 +4,7 @@ spring:
   application:
     name: microservice-user   # 服务名称
   datasource:
-      url: jdbc:mysql://192.168.1.186:3306/myself_wms?characterEnconding=UTF8
+      url: jdbc:mysql://192.168.1.186:3306/daigou_db?characterEnconding=UTF8
       driver-class-name: com.mysql.jdbc.Driver
       username: root
       password: 123

@@ -4,7 +4,7 @@ spring:
   application:
     name: microservice-user   # 服务名称
   zipkin:   # 注册到zipkin服务端 实现链路跟踪
-    base-url:
+    base-url: http://127.0.0.1:9041
     sender:
       type: web
   sleuth:

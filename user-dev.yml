@@ -3,6 +3,13 @@ server:
 spring:
   application:
     name: microservice-user   # 服务名称
+  zipkin:   # 注册到zipkin服务端 实现链路跟踪
+    base-url:
+    sender:
+      type: web
+  sleuth:
+    sampler:
+      probability: 1
   datasource:
       url: jdbc:mysql://192.168.1.186:3306/myself_wms?characterEnconding=UTF8
       driver-class-name: com.mysql.jdbc.Driver

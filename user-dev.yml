@@ -3,11 +3,18 @@ server:
 spring:
   application:
     name: microservice-user   # 服务名称
+  zipkin:
+    base-url: http://127.0.0.1:9041
+    sender:
+      type:
+   sleuth:
+     sampler:
+       probability: 1
   datasource:
-      url: jdbc:mysql://192.168.1.186:3306/myself_wms?characterEnconding=UTF8
-      driver-class-name: com.mysql.jdbc.Driver
-      username: root
-      password: 123
+    url: jdbc:mysql://192.168.1.186:3306/myself_wms?characterEnconding=UTF8
+    driver-class-name: com.mysql.jdbc.Driver
+    username: root
+    password: 123
   jpa:
     show-sql: true # 是否打印sql语句
     generate-ddl: true # 是否自动建表
